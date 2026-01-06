@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pahelukadam.pahelukadam">
+
+    <!-- Add these permissions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- For Android 13+ -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PAHELUKADAM">
+
+        <!-- File Provider for Camera -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.pahelukadam.pahelukadam.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@drawable/file_paths" />
+        </provider>
+
+        <!-- Your existing activities -->
+        <activity
+            android:name=".ui.home.FeaturedIdeaAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.FeaturedAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.FeaturedBusinessAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ui.home.BusinessDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AddIdeaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin.Adminsigninpage"
+            android:exported="false" />
+        <activity
+            android:name=".ui.account.AddMobileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.account.EditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.HubActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.PAHELUKADAM.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.PAHELUKADAM" />
+    </application>
+</manifest>

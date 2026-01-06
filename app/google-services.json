@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "19086589341",
+    "project_id": "pahelukadam-hd",
+    "storage_bucket": "pahelukadam-hd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:19086589341:android:01748bdc6dc3a332494374",
+        "android_client_info": {
+          "package_name": "com.pahelukadam.pahelukadam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "19086589341-e9bftkeeth8cdvhmq2jiq9hm721ms9n2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQAZ0RlCotOujBhSMfADW65Jxrd8AhNpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "19086589341-e9bftkeeth8cdvhmq2jiq9hm721ms9n2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

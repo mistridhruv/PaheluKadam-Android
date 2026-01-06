@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTintMode="add"
+    tools:context=".MainActivity">
+
+    <!-- Background -->
+    <ImageView
+        android:id="@+id/bgImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/singinbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- White Card -->
+    <LinearLayout
+        android:id="@+id/cardLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:background="@drawable/rounded_white_bg"
+        android:elevation="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Logo -->
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="80dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="-25dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="App Logo"
+            android:src="@drawable/logomain" />
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/major_mono_display"
+            android:text="PAHELUKADAM"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Sign In Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="24dp"
+            android:text="Sign in"
+            android:textColor="#000000"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <!-- Email Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="16dp"
+            android:text="Email ID"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Email Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/black">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/emailField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="#000000"
+                android:textColorHint="#808080" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password Label -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginTop="16dp"
+            android:text="Password"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <!-- Password Field -->
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:boxStrokeColor="@color/black"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/black"> <!-- 👈 Added this line -->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#808080" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Sign In Button -->
+        <Button
+            android:id="@+id/adminSignInBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#153d82"
+            android:padding="12dp"
+            android:text="Sign in"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
